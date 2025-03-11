@@ -1,0 +1,205 @@
+.mainContent {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.layoutGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.layoutOption {
+  background-color: var(--secondary-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.layoutOption:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.layoutOption.selected {
+  background-color: #7b5dfb;
+  color: white;
+}
+
+.layoutOption h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.layoutOption p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--secondary-text);
+}
+
+.selectedLayout {
+  background-color: var(--secondary-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.demoContainer {
+  margin: 2rem 0;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  min-height: 400px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.codeToggle {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.codeToggle button {
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.codeToggle button:hover {
+  background-color: #7b5dfb;
+  color: white;
+}
+
+.codeContainer {
+  background-color: var(--secondary-background);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.copyButton,
+.saveButton {
+  background-color: #7b5dfb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.copyButton:hover,
+.saveButton:hover {
+  background-color: #6344e0;
+}
+
+.customLayoutInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.layoutDemo {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.visualExample {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: var(--secondary-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.visualExample h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+/* Demo elements styles */
+.layoutDemo [class*="layout"] {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.layoutDemo [class*="layout"] > * {
+  border: 1px solid var(--border-color);
+  background-color: var(--secondary-background);
+}
+
+.layoutDemo .card,
+.layoutDemo .gallery-item,
+.layoutDemo .masonry-item {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.layoutDemo nav,
+.layoutDemo aside,
+.layoutDemo header,
+.layoutDemo footer {
+  background-color: var(--secondary-background);
+  color: var(--text-color);
+}
+
+.layoutDemo main {
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .layoutGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .customLayoutInputs {
+    grid-template-columns: 1fr;
+  }
+
+  .mainContent {
+    padding: 1rem;
+  }
+
+  .selectedLayout {
+    padding: 1.5rem;
+  }
+
+  .demoContainer {
+    padding: 1rem;
+  }
+}
+

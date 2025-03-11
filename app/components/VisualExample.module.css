@@ -1,0 +1,120 @@
+.cardLayout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 200px;
+  max-width: 250px;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.flexExample {
+  background-color: var(--background-color);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.flexExample h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.flexContainer {
+  display: flex;
+  background-color: var(--secondary-background);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.flexItem {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  padding: 1rem;
+  margin: 0.25rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+/* flex-direction examples */
+.flexRow {
+  flex-direction: row;
+}
+
+.flexColumn {
+  flex-direction: column;
+}
+
+/* justify-content examples */
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+.justifySpaceBetween {
+  justify-content: space-between;
+}
+
+.justifySpaceAround {
+  justify-content: space-around;
+}
+
+/* align-items examples */
+.alignStretch {
+  align-items: stretch;
+  height: 100px;
+}
+
+.alignStart {
+  align-items: flex-start;
+  height: 100px;
+}
+
+.alignCenter {
+  align-items: center;
+  height: 100px;
+}
+
+.alignEnd {
+  align-items: flex-end;
+  height: 100px;
+}
+
+/* flex-wrap examples */
+.flexNoWrap {
+  flex-wrap: nowrap;
+}
+
+.flexWrap {
+  flex-wrap: wrap;
+}
+
+/* flex-grow examples */
+.flexNoGrow .flexItem {
+  flex-grow: 0;
+}
+
+.flexGrow .flexItem {
+  flex-grow: 1;
+}
+
+.flexGrow .flexItem:nth-child(2) {
+  flex-grow: 2;
+}
+
